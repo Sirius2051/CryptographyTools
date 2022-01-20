@@ -8,13 +8,10 @@ class Atbash:
 	def Convertion(self, text):
 		self.converted_text = []
 		for letter in text:
-			# 
 			if letter in self.rules and self.rules.index(letter) < (len(self.rules)//2): 
 				self.converted_text.append(self.rules[self.rules.index(letter)+26])
-			# 
 			elif letter in self.rules and self.rules.index(letter) >= (len(self.rules)//2): 
 				self.converted_text.append(self.rules[self.rules.index(letter)-26])
-			# 
 			else:
 				self.converted_text.append(letter)
 		return ''.join(self.converted_text)
